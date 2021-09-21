@@ -19,7 +19,7 @@ jobs:
           java-package: jdk
           java-version: ${{ matrix.java }}
       - name: Compile the Project
-        run: mvn -B compile
+        run: mvn -B compile versions:set -DnewVersion=1.0.${{ github.run_number }}-SNAPSHOT
   build:
     runs-on: ubuntu-20.04
     needs: compile
