@@ -1,6 +1,6 @@
 name: Build sample project
  
-on: workflow_dispatch
+on: push
  
 jobs:
   compile:
@@ -39,14 +39,14 @@ jobs:
           java-version: '8'
           java-package: jdk
     - name: Build and test project
-      run: mvn -B verify versions:set -DnewVersion=${{ github.ref }}-SNAPSHOT
+      run: mvn -B verify versions:set -DnewVersion=1.0.${{ github.run_number }}-SNAPSHOT
     - name: Create Release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}-SNAPSHOT
+        tag_name: 1.0.${{ github.run_number }}
+        release_name: Release 1.0.${{ github.run_number }}-SNAPSHOT
         body: |
           Changes in this Release
           - First Change
