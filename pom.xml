@@ -6,7 +6,7 @@
     <!-- basic info -->
     <groupId>com.ubirch.testlib</groupId>
     <artifactId>ubirch-lib-test</artifactId>
-    <version>${version}</version>
+    <version>${revision}</version>
     <name>${project.artifactId}</name>
     <description>Simple test to check how deployment works</description>
     <url>https://ubirch.com</url>
@@ -41,6 +41,7 @@
         <scala.version>2.12.6</scala.version>
         <scala.compat.version>2.12</scala.compat.version>
         <scalatest.version>3.0.5</scalatest.version>
+        <revision>1.0.0-SNAPSHOT</revision>
 
         <!-- plugins -->
         <scalariform.version>0.2.2</scalariform.version>
