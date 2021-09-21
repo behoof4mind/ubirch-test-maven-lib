@@ -40,6 +40,7 @@ jobs:
           java-package: jdk
     - name: Build and test project
       run: mvn -B verify versions:set -DnewVersion=1.0.${{ github.run_number }}-SNAPSHOT
+    - run: ls -lah
     - name: Create Release
       uses: actions/create-release@v1
       env:
