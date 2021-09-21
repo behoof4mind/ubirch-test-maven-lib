@@ -42,11 +42,11 @@ jobs:
       run: mvn -B verify versions:set -DnewVersion=1.0.${{ github.run_number }}-SNAPSHOT
     - run: ls -lah target
     - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: |
-            target/*.jar
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: |
+          target/*.jar
 
 #    - name: Upload Maven build artifact
 #      uses: actions/upload-artifact@v2
