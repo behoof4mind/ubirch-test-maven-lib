@@ -10,7 +10,8 @@
     <name>${project.artifactId}</name>
     <description>Simple test to check how deployment works</description>
     <url>https://ubirch.com</url>
-    <inceptionYear>2019</inceptionYear>
+    <inceptionYear>2021</inceptionYear>
+    <packaging>jar</packaging>
 
     <organization>
         <name>ubirch GmbH</name>
