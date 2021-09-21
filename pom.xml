@@ -121,7 +121,7 @@
                 <artifactId>maven-source-plugin</artifactId>
                 <version>${maven-source-plugin.version}</version>
                 <configuration>
-                    <finalName>${project.name}</finalName>
+                    <finalName>${jar.finalName}</finalName>
                 </configuration>
                 <executions>
                     <execution>
